@@ -20,18 +20,18 @@ public class Section1 {
         
     }
     
-    public static String encrypt(String plainText, int key){            //voice   ->  3
-        String encryptedText = "";                                      
-        for (int i = 0; i < plainText.length(); i++){                   
-            encryptedText += ((char) (key + plainText.charAt(i)));      //yrlfh
+    public static String encrypt(String plainText, int key){
+        String encryptedText = "";
+        for (int i = 0; i < plainText.length(); i++){
+            encryptedText += ((char) (key + plainText.charAt(i)));
         }
-        return encryptedText;                                           //"yrlfh"
+        return encryptedText;      
     }
     
-    public static String decrypt(String ciphertext, int key){    //y
+    public static String decrypt(String ciphertext, int key){
         String plaintext = "";
         for (int i = 0; i < ciphertext.length(); i++){
-            plaintext += ((char) (ciphertext.charAt(i) - key));   //v
+            plaintext += ((char) (ciphertext.charAt(i) - key));   
         }
         return plaintext;
     }
